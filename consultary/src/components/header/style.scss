@@ -1,0 +1,67 @@
+@import "./src/assets/style/variables";
+@import "./src/assets/style/index";
+//@import "./src/assets/fonts/style";
+
+
+.header{
+  max-width : 1440px;
+  width     : 100%;
+  padding   : 0 65px;
+  margin    : 0 auto;
+  height: 90px;
+  background-color: $main-color;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .P-header-menu{
+    display: flex;
+    align-items: center;
+
+
+      .P-header-logo {
+        display: flex;
+        align-items: center;
+
+
+        p {
+          font-weight: 800;
+          font-size: 24px;
+          line-height: 29px;
+          text-transform: uppercase;
+          color: $yellow;
+          margin: 0 15px;
+        }
+      }
+
+
+    ul{
+      display: flex;
+      li{
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 18px;
+        letter-spacing: 0.20000000298023224px;
+        color: $white;
+        margin: 0 16px;
+        //font-family: Montserrat-Regular;
+
+
+        &:hover{
+          color: $yellow;
+          cursor: pointer;
+        }
+      }
+    }
+    span{
+      width: 1px;
+      height: 16px;
+      background-color: $white;
+      margin: 0 16px;
+    }
+    .search{
+      cursor: pointer;
+      margin-left: 16px;
+    }
+  }
+}

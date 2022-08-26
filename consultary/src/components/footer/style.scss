@@ -1,0 +1,31 @@
+@import "./src/assets/style/variables";
+@import "./src/assets/style/index";
+
+
+.P-main-footer{
+  background-color: $second-color;
+  padding: 120px 0;
+  .P-footer-logo{
+    max-width: 12%;
+    width: 100%;
+    p{
+      font-weight: 800;
+      font-size: 19px;
+      line-height: 29px;
+      color: $yellow;
+      text-align: center;
+    }
+  }
+}
+
+.P-footer-reserved{
+  padding: 7px 0;
+  background-color: $yellow;
+  text-align: center;
+
+  p{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+  }
+}

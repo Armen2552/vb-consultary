@@ -1,0 +1,20 @@
+.G-container {
+  max-width : 1440px;
+  width     : 100%;
+  padding   : 0 165px;
+  margin    : 0 auto;
+}
+
+.G-button{
+  height: 46px;
+  max-width: 152px;
+  width: 100%;
+  border-radius: 5px;
+  background-color: $yellow;
+  color: $black;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  border: none;
+  cursor: pointer;
+}
