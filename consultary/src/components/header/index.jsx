@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import "./style.scss"
 import headerLogo from "../../assets/images/logo1.png";
-import SignIn from "../pop-up";
+import SignIn from "../pop-up/pop-up-main";
 
 
 

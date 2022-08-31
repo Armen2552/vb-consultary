@@ -1,10 +1,9 @@
 import React, {useState} from "react";
 import "./style.scss"
-import Logo from "../../assets/images/logo1.png"
-import {RegistrationUser} from "../../platform/api/index";
+import {RegistrationUser} from "../../../platform/api/index";
 
 
-const SignIn = () => {
+const User = () => {
 
     const [user, setUser] = useState({
         title: "user",
@@ -32,17 +31,8 @@ const SignIn = () => {
         }
     }
 
-    return <div className="P-pop-up G-flex G-center">
-        {/*{console.log(user2)}*/}
-        <div className="P-regitsration">
-            <div className="P-regitsration-main G-flex G-flex-column G-center">
-                <div className="P-regitsration-logo"><img src={Logo} alt="Logo"/></div>
-                <div className="P-regitsration-chose G-flex G-justify-evenly">
-                    <button className="G-button">User</button>
-                    <button className="G-button">Company</button>
-                </div>
-            </div>
-            <div className="P-regitsration-fields">
+    return <div className="P-regitsration-fields">
+                <span>All fields are required</span>
                 <div className="P-gender">
                     <p>Title</p>
                     <button onClick={()=>Genderclick("Mr.")} className="P-gender-mr">Mr.</button>
@@ -78,8 +68,6 @@ const SignIn = () => {
                     <button onClick={signUpClick} className="P-sign-up">Sign Up</button>
                 </div>
             </div>
-        </div>
-    </div>
 }
 
-export default SignIn
+export default User
