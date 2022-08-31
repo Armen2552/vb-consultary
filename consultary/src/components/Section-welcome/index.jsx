@@ -42,8 +42,8 @@ const Welcome = ()=>{
                 <h1>Welcome to <span>VBK Concultancy</span></h1>
                 <p>Best Platform to Learn Everything</p>
                 <div className="P-welcome-boxes G-flex G-align-center G-justify-between">
-                    {box.map((elem)=>{
-                        return <div className="P-welcome-box G-flex G-flex-column G-center" style={{backgroundColor: elem.color}}>
+                    {box.map((elem,index)=>{
+                        return <div key={index} className="P-welcome-box G-flex G-flex-column G-center" style={{backgroundColor: elem.color}}>
                             <img src={elem.img} alt="Logo"/>
                             <p>{elem.title}</p>
                         </div>

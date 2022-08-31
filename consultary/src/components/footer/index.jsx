@@ -1,9 +1,28 @@
-import React from "react";
+import React, {useState} from "react";
 import "./style.scss"
 import Logofooter from "../../assets/images/logo1.png"
 
 const Footer = ()=>{
 
+    const[list1] = useState([
+        {
+            description: "Feature Links",
+            path: "/feature-link"
+        },
+        {
+            description: "About us",
+            path: "/about-us"
+        },
+        {
+            description: "Vacancies",
+            path: "/vacancies"
+        },
+        {
+            description: "Feature Links",
+            path: "/feature-link"
+        },
+
+    ])
 
 
     return <div>

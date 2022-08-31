@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import "./style.scss"
 import headerLogo from "../../assets/images/logo1.png";
-import headerSearch from "../../assets/images/Search.png";
+import SignIn from "../pop-up";
 
 
 
@@ -11,7 +11,15 @@ import headerSearch from "../../assets/images/Search.png";
 const Header = ()=>{
 
 
-    const [menu] = useState(['About Us','Vacancies','Careers','Contact Us'])
+    const [menu] = useState(['About Us','Vacancies','Contact Us'])
+    const [signIn,useSignin] = useState(false)
+
+
+
+    const Takeregistration = ()=>{
+        useSignin(true)
+    }
+
 
 
 
@@ -23,14 +31,15 @@ const Header = ()=>{
                     <p>VBK CONSULTANCY</p>
                 </div>
                 <ul>
-                    {menu.map((elem)=>{
-                        return <li>{elem}</li>
+                    {menu.map((elem,index)=>{
+                        return <li key={index}>{elem}</li>
                     })}
                 </ul>
                 <span />
-                <img className='search' src={headerSearch} alt="Search"/>
+                <i className="icon-Search P-search" />
             </div>
-            <button className='G-button'>Sign In</button>
+            <button onClick={Takeregistration} className='G-button'>Sign In</button>
+            {signIn? <SignIn /> : null}
         </div>
     </div>
 }

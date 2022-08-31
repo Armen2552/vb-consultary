@@ -1,6 +1,6 @@
 @import "./src/assets/style/variables";
 @import "./src/assets/style/index";
-//@import "./src/assets/fonts/style";
+@import "./src/assets/fonts/style";
 
 
 .header{
@@ -25,6 +25,7 @@
 
 
         p {
+          font-family: 'Montserrat-ExtraBold';
           font-weight: 800;
           font-size: 24px;
           line-height: 29px;
@@ -44,7 +45,7 @@
         letter-spacing: 0.20000000298023224px;
         color: $white;
         margin: 0 16px;
-        //font-family: Montserrat-Regular;
+        font-family: Montserrat-Medium;
 
 
         &:hover{
@@ -59,9 +60,10 @@
       background-color: $white;
       margin: 0 16px;
     }
-    .search{
+    .P-search{
       cursor: pointer;
       margin-left: 16px;
+      color: $white;
     }
   }
 }

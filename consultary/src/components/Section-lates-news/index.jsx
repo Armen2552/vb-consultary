@@ -32,9 +32,9 @@ const LatestNews = ()=>{
             <div className="G-container">
                 <h2>Latest News</h2>
                 <div className="G-flex G-justify-between">
-                    {news.map((elem)=>{
-                        return <div className="P-latest-box">
-                            <div className="P-latest-img" style={{backgroundImage: `url(${elem.img})`}}/>
+                    {news.map((elem,index)=>{
+                        return <div key={index} className="P-latest-box">
+                            <div className="P-latest-img" style={{backgroundImage: `url('${elem.img}')`}}/>
                             <div className="P-latest-box-title">
                                 <h3>{elem.description}</h3>
                                 <h4>{elem.title}</h4>

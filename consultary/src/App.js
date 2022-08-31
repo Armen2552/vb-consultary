@@ -5,6 +5,8 @@ import Welcome from "./components/Section-welcome";
 import VideoCover from "./components/Video-cover";
 import LatestNews from "./components/Section-lates-news";
 import Footer from "./components/footer";
+import "./assets/icon/style.css"
+
 
 function App() {
   return (
