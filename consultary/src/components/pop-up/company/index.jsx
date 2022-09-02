@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import "./style.scss"
+import "../user/style.scss"
 import {RegistrationCompany} from "../../../platform/api/index";
 
 
@@ -7,7 +7,7 @@ const Company = () => {
 
     const [company, setCompany] = useState({
         title: "company",
-        gender: "",
+        gender: "Mr.",
         companyName: "",
         contactPerson: "",
         companyEmail: "",
@@ -18,7 +18,7 @@ const Company = () => {
         setCompany({...company, [e.target.name]: e.target.value})
     }
 
-    const Genderclick = (a) => {
+    const genderclick = (a) => {
         setCompany({...company, gender: a})
     }
 
@@ -34,36 +34,46 @@ const Company = () => {
     return  <div className="P-regitsration-fields">
         {console.log(company)}
                 <span>All fields are required</span>
-                <div className="P-gender">
+                <div className="P-gender G-flex">
                     <p>Title</p>
-                    <button onClick={()=>Genderclick("Mr.")} className="P-gender-mr">Mr.</button>
-                    <button onClick={()=>Genderclick("Ms.")} className="P-gender-ms">Ms.</button>
+                    <button
+                        onClick={()=>genderclick("Mr.")}
+                        className={`P-gender-mr ${company.gender==="Mr."? 'P-gender-active' : null}`}>Mr.</button>
+                    <button
+                        onClick={()=>genderclick("Ms.")}
+                        className={`P-gender-mr ${company.gender==="Ms."? 'P-gender-active' : null}`}>Ms.</button>
                 </div>
                 <div className="form">
-                    <div className="P-names">
-                        <div className="P-name">
+                    <div className="P-names G-flex G-flex-wrap G-justify-between">
+                        <div className="P-first-name">
                             <p>Company Name</p>
                             <label>
                                 <input type="text" onChange={handleChange} name={'companyName'}/>
                             </label>
                         </div>
-                        <div className="P-name">
+                        <div className="P-first-name">
                             <p>Contact Person/Title</p>
                             <label>
                                 <input type="text" onChange={handleChange} name={'contactPerson'}/>
                             </label>
                         </div>
-                        <div className="P-name">
+                        <div className="P-email">
                             <p>Company Email</p>
                             <label>
                                 <input type="text" onChange={handleChange} name={'companyEmail'}/>
                             </label>
                         </div>
-                        <div className="P-name">
+                        <div className="P-password">
                             <p>Password</p>
                             <label>
                                 <input type="text" onChange={handleChange} name={'password'}/>
                             </label>
+                        </div>
+                        <div className="P-accept G-flex">
+                            <label>
+                                <input type="checkbox" />
+                            </label>
+                            <p><span>Accept</span> Terms & Conditions</p>
                         </div>
                     </div>
                     <button onClick={signUpCompanyClick} className="P-sign-up">Sign Up</button>
