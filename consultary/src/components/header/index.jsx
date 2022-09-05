@@ -1,6 +1,6 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import "./style.scss"
-import headerLogo from "../../assets/images/logo1.png";
+import headerLogo from "../../assets/images/logo.svg";
 import SignIn from "../pop-up/pop-up-main";
 
 
@@ -9,15 +9,23 @@ import SignIn from "../pop-up/pop-up-main";
 
 
 const Header = ()=>{
+    useEffect(()=>{
+        if(signIn){
+            document.body.style.overflow = "hidden"
+        }
+    })
 
 
     const [menu] = useState(['About Us','Vacancies','Contact Us'])
-    const [signIn,useSignin] = useState(false)
+    const [signIn,setSignin] = useState(false)
 
 
+    const closeRegistration = (a)=>{
+        setSignin(a)
+    }
 
-    const Takeregistration = ()=>{
-        useSignin(true)
+    const openRegistration = ()=>{
+        setSignin(true)
     }
 
 
@@ -25,6 +33,7 @@ const Header = ()=>{
 
     return <div>
         <div className="header">
+            {console.log(signIn)}
             <div className="P-header-menu">
                 <div className="P-header-logo">
                     <img src={headerLogo} alt="Logo"/>
@@ -38,8 +47,8 @@ const Header = ()=>{
                 <span />
                 <i className="icon-Search P-search" />
             </div>
-            <button onClick={Takeregistration} className='G-button'>Sign In</button>
-            {signIn? <SignIn /> : null}
+            <button onClick={openRegistration} className='G-button'>Sign In</button>
+            {signIn? <SignIn close={closeRegistration} /> : null}
         </div>
     </div>
 }

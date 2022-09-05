@@ -21,6 +21,29 @@
     .P-regitsration-main {
       background-color: $main-color;
       border-radius: 15px 15px 0 0;
+      position: relative;
+
+      .P-close-registration{
+        cursor: pointer;
+        position: absolute;
+        top: 24px;
+        right: 22px;
+
+        span{
+          width: 15px;
+          height: 2px;
+          background-color: $white;
+          display: inline-block;
+        }
+        .P-close1{
+          transform: rotate(45deg);
+        }
+        .P-close2{
+          transform: rotate(-45deg);
+          margin-top: -2px;
+        }
+
+      }
       .P-regitsration-logo {
 
 

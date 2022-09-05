@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import "./style.scss"
-import Logofooter from "../../assets/images/logo1.png"
+import Logofooter from "../../assets/images/logo.svg"
 
 const Footer = ()=>{
 
