@@ -96,7 +96,6 @@ const User = () => {
     }
 
     return <div className="P-regitsration-fields">
-        {console.log(user.accept,errors.accept)}
                 <span>All fields are required</span>
                 <div className="P-gender G-flex">
                     <p>Title</p>

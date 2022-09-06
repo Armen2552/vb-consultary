@@ -29,8 +29,8 @@ const SignIn = (props)=>{
                 </div>
                 <div className="P-regitsration-logo"><img src={Logo} alt="Logo"/></div>
                 <div className="P-regitsration-chose G-flex G-justify-evenly">
-                    <button className="G-button" onClick={()=>changeClick("user")}>User</button>
-                    <button className="G-button" onClick={()=>changeClick("company")}>Company</button>
+                    <button className={`G-button ${register==="user"? "P-regitsration-active" : null}`} onClick={()=>changeClick("user")}>User</button>
+                    <button className={`G-button ${register==="company"? "P-regitsration-active" : null}`} onClick={()=>changeClick("company")}>Company</button>
                 </div>
             </div>
             {register==="user"? <User /> : null}

@@ -12,6 +12,8 @@ const Header = ()=>{
     useEffect(()=>{
         if(signIn){
             document.body.style.overflow = "hidden"
+        }else{
+            document.body.style.overflow = "scroll"
         }
     })
 
