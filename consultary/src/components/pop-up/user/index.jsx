@@ -1,11 +1,14 @@
 import React, {useState} from "react";
 import "./style.scss"
 import {RegistrationUser} from "../../../platform/api/index";
-import {isEmail} from "../../../utils/utils";
+import {isEmail, isPassword} from "../../../utils/utils";
+import Eyes from "../../../assets/images/eye.png"
+import EyesClose from "../../../assets/images/eyesX.png"
 
 
 const User = () => {
 
+    const [eyes, setEyes] = useState(true)
 
     const [user, setUser] = useState({
         title: "user",
@@ -37,10 +40,17 @@ const User = () => {
         setUser({...user, gender: a})
     }
 
-    const checkchange = (e) => {
+    const checkChange = (e) => {
         setUser({...user,accept: e.target.checked})
         setErrors({...errors, accept: ''})
     }
+
+    const clickPassword = ()=>{
+        setEyes(!eyes)
+    }
+
+
+
     const validation =()=>{
         let isValidate = true
         const errors = {
@@ -63,7 +73,7 @@ const User = () => {
             isValidate = false
             errors.email = 'Fill the email field'
         }
-        if(user.email && !isEmail(user.email)){
+        else if(user.email && !isEmail(user.email)){
             isValidate = false
             errors.email = 'Incorrect email address'
         }
@@ -71,9 +81,9 @@ const User = () => {
             isValidate = false
             errors.password = 'Fill the password field'
         }
-        if(user.password && user.password.length<6){
+        else if(user.password && !isPassword(user.password)){
             isValidate = false
-            errors.password = 'A minimum 6 characters password contain'
+            errors.password = 'A minimum 8 characters,lowercase,uppercase,number and symbol(!@#$%^&*)'
         }
         if(!user.accept){
             isValidate = false
@@ -85,7 +95,7 @@ const User = () => {
     }
 
     const signUpClick = async ()=>{
-       if(validation()){
+        if(validation()){
            const result = await RegistrationUser(user)
            if (result.data) {
                console.log('success')
@@ -144,24 +154,27 @@ const User = () => {
                             <p>Password</p>
                             <label  className={`${errors.password? 'P-user-error' : ''}`}>
                                 <input
-                                    // type={isPassword?'password':'text'}
-                                    type="text"
+                                    type={eyes?'password':'text'}
+                                    // type="password"
                                     onChange={handleChange}
                                     name={'password'}
                                     value={user.password}/>
-
+                                <img onClick={clickPassword} src={eyes? EyesClose : Eyes} alt="Eyes-logo"/>
                                 {errors.password?<p>{errors.password}</p>:null}
                             </label>
                         </div>
                         <div className={`P-accept G-flex ${errors.accept? "P-accept-error" : null}`}>
                             <label>
-                                <input onChange={checkchange} type="checkbox" />
-                                {/*{errors.accept? <p>{errors.accept}</p>:null}*/}
+                                <input onChange={checkChange} type="checkbox" />
                             </label>
                             <p><span>Accept</span> Terms & Conditions</p>
                         </div>
                     </div>
                     <button onClick={signUpClick} className="P-sign-up">Sign Up</button>
+                    <div className="P-user-have-account G-flex G-align-center G-justify-between">
+                        <p>Have an Account?</p>
+                    </div>
+                    <button id="P-sign-in">Create Your Account</button>
                 </div>
             </div>
 }

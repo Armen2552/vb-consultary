@@ -35,7 +35,6 @@ const Header = ()=>{
 
     return <div>
         <div className="header">
-            {console.log(signIn)}
             <div className="P-header-menu">
                 <div className="P-header-logo">
                     <img src={headerLogo} alt="Logo"/>

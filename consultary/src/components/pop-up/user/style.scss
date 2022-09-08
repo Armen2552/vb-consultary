@@ -129,8 +129,18 @@
             width: 100%;
             margin-top: 16px;
 
-            input{
-              width: 100%;
+            label{
+              position: relative;
+
+              img{
+                position: absolute;
+                right: 12px;
+                top: 2px;
+                cursor: pointer;
+              }
+              input{
+                width: 100%;
+              }
             }
           }
 
@@ -168,7 +178,6 @@
         button{
           width: 100%;
           height: 37px;
-          background: linear-gradient(90.74deg, #343C89 -0.12%, #009688 99.19%);
           border-radius: 5px;
           border: none;
           font-weight: 700;
@@ -176,6 +185,41 @@
           line-height: 17px;
           color: $white;
           cursor: pointer;
+          margin-top: 32px;
+        }
+        .P-sign-up{
+          background: linear-gradient(90.74deg, #343C89 -0.12%, #009688 99.19%);
+        }
+        .P-user-have-account{
+          text-align: center;
+          margin-top: 24px;
+
+          p{
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 17px;
+            color: $bright-grey;
+          }
+
+          &::after{
+            content: "";
+            max-width: 100px;
+            width: 100%;
+            height: 1px;
+            background-color: $bright-grey;
+          }
+          &::before{
+            content: "";
+            max-width: 100px;
+            width: 100%;
+            height: 1px;
+            background-color: $bright-grey;
+          }
+        }
+        #P-sign-in{
+          background-color: $yellow;
+          color: $black;
+          margin-bottom: 40px;
         }
       }
     }
