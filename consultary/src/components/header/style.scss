@@ -68,4 +68,14 @@
       color: $white;
     }
   }
+
+  .P-header-buttons{
+
+    button{
+      width: 120px !important;
+    }
+    .P-header-sign-in{
+      margin-left: 20px;
+    }
+  }
 }

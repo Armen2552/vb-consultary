@@ -8,3 +8,7 @@ export const RegistrationUser = async (data)=>{
 export const RegistrationCompany = async (data)=>{
     return await axios.post(`${ApiUrl}companyRegister`, data)
 }
+
+export const RegisterSignUp = async (data)=>{
+    return await axios.post(`${ApiUrl}signUp`, data)
+}

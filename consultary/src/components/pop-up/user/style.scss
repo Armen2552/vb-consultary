@@ -71,13 +71,11 @@
         .P-names{
 
           .P-error{
-            position: relative;
 
             .P-user-error{
 
               input{
                 border: 1px solid $red;
-                border-radius: 2.7px;
               }
               p{
                 color: $red;
@@ -87,7 +85,6 @@
 
 
           }
-
                 p{
                   font-weight: 600;
                   font-size: 14px;
@@ -99,6 +96,9 @@
                   padding: 8px 10px;
                   border: 1px solid $bright-grey;
                   border-radius: 2.7px;
+                  font-weight: 400;
+                  font-size: 12px;
+                  line-height: 15px;
 
                   &:focus{
                     border: 1px solid $blue-logo;
