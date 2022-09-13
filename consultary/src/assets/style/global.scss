@@ -18,4 +18,10 @@
   border: none;
   cursor: pointer;
   font-family: "Montserrat-Bold";
+  transition: 0.3s;
+
+  &:hover{
+    background-color: $blue-logo;
+    color: $white;
+  }
 }
