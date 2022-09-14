@@ -171,10 +171,6 @@ const User = () => {
                         </div>
                     </div>
                     <button onClick={signUpClick} className="P-sign-up">Sign Up</button>
-                    <div className="P-user-have-account G-flex G-align-center G-justify-between">
-                        <p>Have an Account?</p>
-                    </div>
-                    <button id="P-sign-in">Create Your Account</button>
                 </div>
             </div>
 }

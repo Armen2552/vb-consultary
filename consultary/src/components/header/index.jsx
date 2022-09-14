@@ -54,8 +54,8 @@ const Header = ()=>{
                 <i className="icon-Search P-search" />
             </div>
             <div className="P-header-buttons G-flex">
-                <button onClick={openSignUp} className='G-button'>Sign Up</button>
-                <button onClick={openRegistration} className='G-button P-header-sign-in'>Sign In</button>
+                <button onClick={openSignUp} className='G-button'>Sign In</button>
+                <button onClick={openRegistration} className='G-button P-header-sign-in'>Sign Up</button>
             </div>
             {signIn? <SignIn close={closeRegistration} /> : null}
             {signUp? <SignUp close={closeRegistration} /> : null}
