@@ -51,7 +51,7 @@ const Header = ()=>{
                     })}
                 </ul>
                 <span />
-                <i className="icon-Search P-search" />
+                <i className="icon-search P-search" />
             </div>
             <div className="P-header-buttons G-flex">
                 <button onClick={openSignUp} className='G-button'>Sign In</button>

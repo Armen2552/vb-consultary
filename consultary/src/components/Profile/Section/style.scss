@@ -1,0 +1,53 @@
+@import "./src/assets/style/variables";
+@import "./src/assets/style/index";
+
+
+.P-main{
+  padding: 42px 0 64px;
+
+  .G-profile-container{
+    p{
+      color: $white;
+    }
+    h2{
+      color: $white;
+    }
+    .P-profile-cover{
+      background: linear-gradient(95.02deg, #343C89 0%, #00AB9B 120.45%);
+      border-radius: 15px;
+      padding: 42px 57px 26px;
+      height: 210px;
+      margin-bottom: 32px;
+
+      .P-profile-image{
+        text-align: center;
+
+        .P-image{
+          width: 170px;
+          height: 170px;
+          border-radius: 50%;
+          border: 2px solid $white;
+          margin-bottom: 18px;
+          margin-top: -70px;
+          background-position: center;
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
+      }
+      .P-profile-name{
+        margin-left: 60px;
+
+        h2{
+          margin-bottom: 20px;
+        }
+      }
+    }
+
+    span{
+      width: 100%;
+      height: 1px;
+      background-color: $blue-logo;
+      display: inline-block;
+    }
+  }
+}

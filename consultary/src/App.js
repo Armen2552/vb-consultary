@@ -1,22 +1,24 @@
 import React from "react";
-import Header from "./components/header";
+import Map from "./components/header";
 import Main from "./pages/main-page";
 import Welcome from "./components/Section-welcome";
-import VideoCover from "./components/Video-cover";
 import LatestNews from "./components/Section-lates-news";
-import Footer from "./components/footer";
+// import Footer from "./components/footer";
 import "./assets/icon/style.css"
+import Video from "./components/Video-cover";
+// import {Profile} from "./components/Profile";
 
 
 function App() {
   return (
     <div className="App">
-      <Header />
+      <Map />
       <Main />
       <Welcome />
-      <VideoCover />
+      <Video />
       <LatestNews />
-      <Footer />
+      {/*<Footer />*/}
+      {/*<Profile />*/}
     </div>
   );
 }

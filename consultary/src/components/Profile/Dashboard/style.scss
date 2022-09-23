@@ -1,0 +1,60 @@
+@import "./src/assets/style/variables";
+@import "./src/assets/style/index";
+
+
+.P-profile-dashboard{
+  background-color: $main-color;
+  max-width: 370px;
+  width: 100%;
+  text-align: center;
+  padding: 25px 0;
+
+  .P-dashboard-logo{
+    max-width: 150px;
+    width: 100%;
+
+    img{
+      height: 52px;
+    }
+
+    p {
+      font-family: 'Montserrat-ExtraBold';
+      font-weight: 800;
+      line-height: 29px;
+      text-transform: uppercase;
+      color: $yellow;
+      margin: 0 15px;
+    }
+  }
+
+  ul{
+    margin-top: 44px;
+    text-align: center;
+    width: 100%;
+
+    li{
+      font-weight: 600;
+      font-size: 23px;
+      line-height: 29px;
+      color: $white;
+      margin: 22px 0;
+      padding: 15px 93px;
+      cursor: pointer;
+      width: 100%;
+
+      &:hover{
+        background-color: $white;
+        color: $blue-logo;
+        border-right: 5px solid $blue-logo;
+
+        i:before{
+          color: $blue-logo;
+        }
+      }
+
+      i{
+        margin-right: 34px;
+      }
+    }
+  }
+}

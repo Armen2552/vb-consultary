@@ -98,7 +98,7 @@ const User = () => {
         if(validation()){
            const result = await RegistrationUser(user)
            if (result.data) {
-               console.log('success')
+               console.log(result.data)
            } else {
                console.log('errror')
            }

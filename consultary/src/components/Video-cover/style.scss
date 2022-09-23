@@ -2,7 +2,12 @@
 @import "./src/assets/style/index";
 
 
-.P-section-video{
-  height: 100vh;
-  background-color: silver;
+.P-section-video-main {
+  .P-section-video {
+    height: 100vh;
+    display: flex;
+    margin: 0 auto;
+    background-color: $black;
+    //background-color: $black;
+  }
 }

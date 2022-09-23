@@ -1,0 +1,59 @@
+@import "./src/assets/style/variables";
+@import "./src/assets/style/index";
+
+
+
+.P-profile-map{
+  box-shadow: 6px -3px 13px $black;
+  padding: 30px 0;
+
+  .G-profile-container {
+
+
+    .P-profile-map-main {
+
+      h2 {
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 44px;
+        color: $black;
+        font-family: Montserrat-Bold;
+        margin-bottom: 5px;
+      }
+
+      p {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 21px;
+        color: $blue-logo;
+      }
+    }
+
+    .P-profile-map-description{
+
+      p{
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 22px;
+      }
+
+      .P-notification{
+        margin-right: 22px;
+      }
+
+      .P-description{
+
+        div{
+          width: 54px;
+          height: 54px;
+          border-radius: 50%;
+          border: 1px solid $blue-logo;
+          margin-right: 11px;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: cover;
+        }
+      }
+    }
+  }
+}

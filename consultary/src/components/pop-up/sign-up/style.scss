@@ -136,6 +136,43 @@
           }
         }
       }
+      .P-forgot-password{
+        p{
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 19px;
+          color: $black;
+          margin-bottom: 33px;
+        }
+        div{
+          p{
+            margin: 2px 0;
+            font-family: Montserrat-Bold;
+          }
+
+          label{
+
+            input{
+              font-weight: 400;
+              font-size: 12px;
+              line-height: 16px;
+              border: 1px solid $bright-grey;
+              border-radius: 2.75px;
+              width: 100%;
+              padding: 8px 10px;
+              margin-bottom: 35px;
+
+              &:focus{
+                border: 1px solid $blue-logo;
+              }
+            }
+          }
+        }
+
+        button{
+          margin-bottom: 10px;
+        }
+      }
     }
   }
 }

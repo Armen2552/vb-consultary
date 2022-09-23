@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import "./style.scss"
-import Logofooter from "../../assets/images/logo.svg"
+import LogoFooter from "../../assets/images/logo.svg"
 
 const Footer = ()=>{
 
@@ -29,7 +29,7 @@ const Footer = ()=>{
         <div className="P-main-footer">
             <div className="G-container">
                 <div className="P-footer-logo G-flex G-center G-flex-column">
-                    <img src={Logofooter} alt="Logo"/>
+                    <img src={LogoFooter} alt="Logo"/>
                     <p>VBK CONSULTANCY</p>
                 </div>
             </div>
