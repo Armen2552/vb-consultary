@@ -27,13 +27,16 @@
 
 .icon-logout:before {
   content: "\e900";
+  color: #f3f3f3;
 }
 .icon-single:before {
   content: "\e901";
+  color: #fff;
 }
 .icon-search:before {
   content: "\e903";
 }
 .icon-settings:before {
   content: "\e902";
+  color: #fff;
 }
